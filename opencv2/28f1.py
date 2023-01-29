@@ -1,0 +1,12 @@
+import cv2
+resim = cv2.imread("aa.jpg")
+resim = cv2.resize(resim, (400, 400))
+mean = cv2.blur(resim, (3, 3))
+median = cv2.medianBlur(resim, 3)
+gaussian = cv2.GaussianBlur(resim, (3, 3), 0)
+cv2.imshow("mean", mean)
+cv2.imshow("median", median)
+cv2.imshow("gaussian", gaussian)
+cv2.imshow("resim", resim)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
